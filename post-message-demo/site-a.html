@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>posemessage演示</div>
+    <iframe src="./a.html" frameborder="0"></iframe>
+  </body>
+  <script>
+    alert(2);
+    window.addEventListener("message", function (e) {
+      debugger;
+      console.log(e.origin, e.data);
+
+      console.log(e.data);
+    });
+  </script>
+</html>
