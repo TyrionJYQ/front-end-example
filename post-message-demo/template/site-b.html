@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>网站b</title>
+  </head>
+  <body>
+    <button onclick="sendmessage()">发送message</button>
+  </body>
+  <script>
+    function sendmessage() {
+      var popup = window.open("http://localhost:30005");
+      setTimeout(() => {
+        console.log(popup);
+        popup.postMessage("hello there!", "http://localhost:30005");
+      }, 2000);
+    }
+  </script>
+</html>
